@@ -10,6 +10,7 @@ onMounted(()=>{
   console.log(route.query);
   const code = route.query?.code
   window.opener.postMessage(code,"*")
+  window.close()
 })
 
 </script>
