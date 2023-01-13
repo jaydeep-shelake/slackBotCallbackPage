@@ -8,6 +8,8 @@ import {useRoute} from "vue-router"
 onMounted(()=>{
   const route = useRoute();
   console.log(route.query);
+  const code = route.query?.code
+  window.opener.postMessage(code,"*")
 })
 
 </script>
