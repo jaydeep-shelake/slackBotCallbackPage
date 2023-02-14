@@ -19,7 +19,7 @@ const props = defineProps({
     type: String,
   },
 });
-function converHextToHSL(hex, num) {
+function converHextToHSL(hex, num2, num) {
   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
 
   var r = parseInt(result[1], 16);
@@ -58,10 +58,11 @@ function converHextToHSL(hex, num) {
   l = Math.round(l);
   h = Math.round(360 * h);
 
-  //   var colorInHSL = "hsl(" + h + ", " + s + "%, " + (l + num) + "%)";
+  // var colorInHSL = "hsl(" + h + ", " + s + "%, " + (l + num) + "%)";
 
   //convert from hsl to hex
   l = l + num;
+  s = s + num2;
   l /= 100;
   const a = (s * Math.min(l, 1 - l)) / 100;
   const f = (n) => {
@@ -74,8 +75,8 @@ function converHextToHSL(hex, num) {
   return `#${f(0)}${f(8)}${f(4)}`;
 }
 
-const primaryLightColor = converHextToHSL(props.mainColor, 20); // light color
-const secondaryDarkColor = converHextToHSL(props.mainColor, -20); // dark color
+const primaryLightColor = converHextToHSL(props.mainColor, 0, 20); // light color
+const secondaryDarkColor = converHextToHSL(props.mainColor, -20, -20); // dark color
 </script>
 
 <style scoped>
