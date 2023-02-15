@@ -35,6 +35,7 @@ async function share() {
       await navigator.share({
         title: "Avatar colors",
         url: "https://staging.ssup.co/youtu/be/IcbJ",
+        text: "staging",
       });
       console.log("Data was shared successfully");
     } catch (err) {
