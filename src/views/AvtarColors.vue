@@ -33,7 +33,6 @@ async function share() {
   if (navigator.share) {
     try {
       await navigator.share({
-        title: "Avatar colors",
         url: "https://staging.ssup.co/youtu/be/IcbJ",
         text: "staging",
       });
