@@ -64,6 +64,7 @@ function converHextToHSL(hex, num2, num) {
   l = l + num;
   s = s + num2;
   l /= 100;
+
   const a = (s * Math.min(l, 1 - l)) / 100;
   const f = (n) => {
     const k = (n + h / 30) % 12;

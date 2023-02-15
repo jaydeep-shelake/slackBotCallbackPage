@@ -1,6 +1,7 @@
 <template>
   <div class="w-full">
     <AvtarColor v-for="color in colorsArray" :key="color" :mainColor="color" />
+    <button @click="share" class="share">Share</button>
   </div>
 </template>
 
@@ -28,6 +29,19 @@ const colorsArray = [
   "#77C7C2",
   "#C777BF",
 ];
+async function share() {
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: "Avatar colors",
+        url: "https://staging.ssup.co/youtu/be/IcbJ",
+      });
+      console.log("Data was shared successfully");
+    } catch (err) {
+      console.error("Share failed:", err.message);
+    }
+  }
+}
 </script>
 <style scoped>
 .w-full {
@@ -37,5 +51,11 @@ const colorsArray = [
   align-items: flex-start;
   justify-content: flex-start;
   padding: 40px;
+}
+.share {
+  padding: 10px;
+  background: aqua;
+  color: black;
+  font-size: 20px;
 }
 </style>
