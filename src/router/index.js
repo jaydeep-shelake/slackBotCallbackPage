@@ -1,7 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
 import HomePage from "../views/HomePage.vue";
 import SearchVue from "../views/Search.vue";
-import PostPage from "../views/Posts.vue";
+import PostPage from "../views/PostsPage.vue";
 import CallbackPage from "../views/CallbackPage.vue";
 import AvtarColor from "@/views/AvtarColors.vue";
 const routes = [

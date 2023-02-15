@@ -33,8 +33,7 @@ async function share() {
   if (navigator.share) {
     try {
       await navigator.share({
-        url: "https://staging.ssup.co/youtu/be/IcbJ",
-        text: "staging",
+        text: `staging: https://staging.ssup.co/youtu/be/IcbJ`,
       });
       console.log("Data was shared successfully");
     } catch (err) {
