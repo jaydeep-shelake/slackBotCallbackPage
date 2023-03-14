@@ -4,6 +4,8 @@ import SearchVue from "../views/Search.vue";
 import PostPage from "../views/PostsPage.vue";
 import CallbackPage from "../views/CallbackPage.vue";
 import AvtarColor from "@/views/AvtarColors.vue";
+import BubbleGraph from "@/views/BubbleGraph.vue";
+import SvgComp from "@/views/SvgComp.vue";
 const routes = [
   {
     name: "HomePage",
@@ -29,6 +31,16 @@ const routes = [
     name: "AvatarPage",
     path: "/avatar-color",
     component: AvtarColor,
+  },
+  {
+    name: "BubbleGraph",
+    path: "/bubble",
+    component: BubbleGraph,
+  },
+  {
+    name: "SvgPage",
+    path: "/svg",
+    component: SvgComp,
   },
 ];
 const router = createRouter({

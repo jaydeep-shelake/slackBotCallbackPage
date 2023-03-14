@@ -7,6 +7,7 @@
 
 <script setup>
 import AvtarColor from "@/components/AvtarColor.vue";
+
 const colorsArray = [
   "#FF6B6B",
   "#FCE831",
@@ -32,7 +33,9 @@ const colorsArray = [
 async function share() {
   if (navigator.share) {
     try {
-      await navigator.share(`staging: https://staging.ssup.co/youtu/be/IcbJ`);
+      await navigator.share({
+        text: `staging: https://staging.ssup.co/youtu/be/IcbJ`,
+      });
       console.log("Data was shared successfully");
     } catch (err) {
       console.error("Share failed:", err.message);
