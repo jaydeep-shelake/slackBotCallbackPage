@@ -6,6 +6,7 @@ import CallbackPage from "../views/CallbackPage.vue";
 import AvtarColor from "@/views/AvtarColors.vue";
 import BubbleGraph from "@/views/BubbleGraph.vue";
 import SvgComp from "@/views/SvgComp.vue";
+import TestPage from "@/views/TestPage.vue"
 const routes = [
   {
     name: "HomePage",
@@ -41,6 +42,11 @@ const routes = [
     name: "SvgPage",
     path: "/svg",
     component: SvgComp,
+  },
+  {
+    name: "TestPage",
+    path: "/test",
+    component:TestPage,
   },
 ];
 const router = createRouter({
